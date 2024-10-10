@@ -1,0 +1,30 @@
+/**
+ * Performs various mathematical operations on two numbers.
+ * 
+ * @param {number} num1 The first number.
+ * @param {number} [num2] The second number. If not provided, an error message is displayed.
+ * @param {string} [operation='add'] The type of arithmetic operation to perform. .
+ */
+function calculate(num1, num2, operation) {
+  // Check if the second number is not provided
+  if (typeof num2 === 'undefined') {
+    console.log('Second Number Not Found');
+    return;
+  }
+
+  // Check if the operation is not provided, default to 'add'
+  if (typeof operation === 'undefined') {
+    operation = 'add';
+  }
+
+  // Perform the mathematical operation based on the operation type
+  if (operation === 'add') {
+    console.log(`The result of adding ${num1} and ${num2} is ${num1 + num2}`);
+  } else if (operation === 'subtract') {
+    console.log(`The result of subtracting ${num2} from ${num1} is ${num1 - num2}`);
+  } else if (operation === 'multiply') {
+    console.log(`The result of multiplying ${num1} and ${num2} is ${num1 * num2}`);
+  } else {
+    console.log('Invalid operation');
+  }
+}
