@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------------------
+It is strictly forbidden to use numbers,
+ and you can use the values of variables along with what you have learned to implement what is required
+It is required to print numbers only from the beginning of the number two to the end
+Think a little logically about how you will make the loop ignore the number 1
+You must use the Loop For to do the required thing
+------------------------------------------------------------------------------*/
+
+let mix = [1, 2, 3, "A", "B", "C", 4];
+
+// Initialize the index variable
+let i = 0;
+
+// Use a for loop to iterate over the array
+for (; i < mix.length; i++) {
+  // Check if the current element is a number and not equal to 1
+  if (typeof mix[i] === 'number' && mix[i] !== 1) {
+    // Print the number
+    console.log(mix[i]);
+  }
+}
+
+// Output
+// 2
+// 3
+// 4
+
